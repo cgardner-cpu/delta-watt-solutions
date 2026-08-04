@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #111827;
+    --bg-panel: #1e293b;
+    --bg-surface: #263247;
+    --border-color: #334155;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --text-secondary: #cbd5e1;
+    --accent-blue: #38bdf8;
+    --accent-blue-dark: #2563eb;
+}
+
+body {
+    font-family: 'Space Grotesk', -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+}
+
+/* Monospace accents for engineering data/numbers */
+.font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* High-contrast borders and sharp edges */
+.border-industrial {
+    border: 1px solid var(--border-color);
+}
+
+.border-industrial-bold {
+    border: 2px solid #FFFFFF;
+}
+
+/* Primary Action Button */
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: #0f172a;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-blue-dark);
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.18);
+}
+
+/* Secondary Action Button */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    font-weight: 600;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    border-color: #cbd5e1;
+    background-color: rgba(148, 163, 184, 0.08);
+}
+
+/* Crisp Technical Grid Background */
+.bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+/* Form Inputs */
+input,
+select,
+textarea {
+    background-color: #0f172a !important;
+    border: 1px solid rgba(148, 163, 184, 0.25) !important;
+    color: #e2e8f0 !important;
+    border-radius: 1rem !important;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent-blue) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* Sharp structural cards */
+.sharp-card {
+    border-radius: 0;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+/* Custom selection styling */
+::selection {
+    background: #FFFFFF;
+    color: #000000;
+}
