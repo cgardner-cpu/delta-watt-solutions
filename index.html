@@ -307,13 +307,40 @@
     <!-- Form Handler Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const handleFormSubmit = (event) => {
+            // Replace with your Google Apps Script Web App URL from Step 3
+            const scriptURL = 'https://script.google.com/macros/s/YOUR_EXEC_ID_HERE/exec';
+
+            const submitToGoogle = (formElement, event) => {
                 event.preventDefault();
-                alert('Thank you! Your energy assessment request has been received. A Delta Watt specialist will contact you shortly.');
-                event.target.reset();
+                const submitBtn = formElement.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerText;
+                
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Submitting...';
+
+                // Gather inputs from the form
+                const formData = new FormData(formElement);
+
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                        alert('Assessment request received. A Delta Watt energy specialist will contact you within 24 hours.');
+                        formElement.reset();
+                    })
+                    .catch(error => {
+                        alert('Submission error. Please try again or email us directly.');
+                        console.error('Error!', error.message);
+                    })
+                    .finally(() => {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalText;
+                    });
             };
 
-            document.getElementById('audit-form').addEventListener('submit', handleFormSubmit);
+            const heroForm = document.getElementById('hero-form');
+            const auditForm = document.getElementById('audit-form');
+
+            if (heroForm) heroForm.addEventListener('submit', (e) => submitToGoogle(heroForm, e));
+            if (auditForm) auditForm.addEventListener('submit', (e) => submitToGoogle(auditForm, e));
         });
     </script>
 </body>
