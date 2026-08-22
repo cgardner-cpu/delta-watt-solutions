@@ -1,112 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap');
 
 :root {
-    --bg-main: #0f172a;
-    --bg-card: #111827;
-    --bg-panel: #1e293b;
-    --bg-surface: #263247;
-    --border-color: #334155;
-    --text-main: #e2e8f0;
-    --text-muted: #94a3b8;
-    --text-secondary: #cbd5e1;
-    --accent-blue: #38bdf8;
-    --accent-blue-dark: #2563eb;
+    --bg-main: #020617;          
+    --bg-card: #0b1329;          
+    --bg-input-dark: #0d172a;     /* Deep dark slate background for inputs */
+    --border-input: #1e293b;     /* Subtle dark border */
+    --border-focus: #3b82f6;     
+    --text-main: #f8fafc;
+    --accent-blue: #2563eb;
+    --accent-blue-hover: #1d4ed8;
 }
 
 body {
-    font-family: 'Space Grotesk', -apple-system, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--bg-main);
-    color: var(--text-main);
+    color: #cbd5e1;
     letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Monospace accents for engineering data/numbers */
 .font-mono-data {
     font-family: 'JetBrains Mono', monospace;
 }
 
-/* High-contrast borders and sharp edges */
-.border-industrial {
-    border: 1px solid var(--border-color);
+.industrial-card {
+    background-color: var(--bg-card);
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
 }
 
-.border-industrial-bold {
-    border: 2px solid #FFFFFF;
-}
-
-/* Primary Action Button */
 .btn-primary {
+    display: inline-flex;
+    align-items: center;
     background-color: var(--accent-blue);
-    color: #0f172a;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    border: 1px solid rgba(56, 189, 248, 0.35);
-    transition: all 0.2s ease;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: var(--accent-blue-dark);
-    color: #ffffff;
-    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.18);
+    background-color: var(--accent-blue-hover);
 }
 
-/* Secondary Action Button */
 .btn-secondary {
+    display: inline-flex;
+    align-items: center;
     background-color: transparent;
-    color: var(--text-main);
-    font-weight: 600;
-    border: 1px solid rgba(148, 163, 184, 0.35);
-    transition: all 0.2s ease;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-input);
+    padding: 0.75rem 1.25rem;
+    transition: all 0.2s ease-in-out;
 }
 
-.btn-secondary:hover {
-    border-color: #cbd5e1;
-    background-color: rgba(148, 163, 184, 0.08);
-}
-
-/* Crisp Technical Grid Background */
-.bg-grid-pattern {
-    background-size: 40px 40px;
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-}
-
-/* Form Inputs */
-input,
-select,
-textarea {
-    background-color: #0f172a !important;
-    border: 1px solid rgba(148, 163, 184, 0.25) !important;
-    color: #e2e8f0 !important;
-    border-radius: 1rem !important;
-    font-family: 'JetBrains Mono', monospace;
-}
-
-input::placeholder,
-select::placeholder,
-textarea::placeholder {
-    color: #94a3b8 !important;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--accent-blue) !important;
+/* Hard Overrides for Dark Form Controls & Dropdowns */
+.dark-input {
+    width: 100% !important;
+    background-color: var(--bg-input-dark) !important;
+    border: 1px solid var(--border-input) !important;
+    color: var(--text-main) !important;
+    border-radius: 10px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.875rem !important;
+    padding: 0.85rem 1rem !important;
+    transition: all 0.2s ease-in-out !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
     outline: none !important;
-    box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.15) !important;
 }
 
-/* Sharp structural cards */
-.sharp-card {
-    border-radius: 0;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
+.dark-input::placeholder {
+    color: #64748b !important;
 }
 
-/* Custom selection styling */
-::selection {
-    background: #FFFFFF;
-    color: #000000;
+.dark-input:focus {
+    border-color: var(--border-focus) !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Specific styling for <select> dropdowns */
+.dark-select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%3a94a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e") !important;
+    background-position: right 0.85rem center !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.2em 1.2em !important;
+    padding-right: 2.75rem !important;
+    cursor: pointer !important;
+}
+
+/* Force dark options menu in Chrome/Firefox/Safari */
+.dark-select option {
+    background-color: #0d172a !important;
+    color: #f8fafc !important;
+    padding: 12px !important;
+}
+
+/* Override browser auto-fill forced light background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+select:-webkit-autofill {
+    -webkit-text-fill-color: #f8fafc !important;
+    -webkit-box-shadow: 0 0 0px 1000px #0d172a inset !important;
+    transition: background-color 5000s ease-in-out 0s !important;
 }

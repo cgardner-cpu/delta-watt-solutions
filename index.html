@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delta Watt Solutions | Apply for Energy Assessment | deltawattsolutions.com</title>
+    <title>Delta Watt Solutions | PA Industrial Utility Tax Refund Audits</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            navy: '#0A192F',
-                            blue: '#0052CC',
-                            electric: '#00D2FF',
-                            gray: '#1E293B',
-                            light: '#F8FAFC'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Custom dropdown arrow and autofill fix */
+        select {
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%3a94a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e") !important;
+            background-position: right 0.85rem center !important;
+            background-repeat: no-repeat !important;
+            background-size: 1.2em 1.2em !important;
+        }
+
+        /* Prevent Chrome/Edge auto-fill white background */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        select:-webkit-autofill {
+            -webkit-text-fill-color: #f8fafc !important;
+            -webkit-box-shadow: 0 0 0px 1000px #0f172a inset !important;
+            transition: background-color 5000s ease-in-out 0s !important;
+        }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
+
+<body class="bg-slate-950 text-slate-200 antialiased font-['Inter']">
 
     <!-- Header / Navbar -->
-    <header class="fixed w-full bg-slate-950/95 backdrop-blur z-50 border-b border-slate-800/50">
+    <header class="fixed w-full bg-slate-950/90 backdrop-blur z-50 border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Custom Logo Integration -->
-                <a href="#" class="flex items-center gap-4 group">
-                    <svg class="h-12 sm:h-14 md:h-16 w-auto text-sky-400" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Left line -->
-                        <line x1="10" y1="100" x2="130" y2="100" stroke="currentColor" stroke-width="8"/>
-                        <!-- Left arrow head -->
-                        <polygon points="65,80 115,100 65,120" fill="currentColor"/>
-                        <!-- Main circle -->
-                        <circle cx="200" cy="100" r="75" stroke="currentColor" stroke-width="8" fill="none"/>
-                        <!-- Delta W text -->
-                        <text x="200" y="115" font-family="'Times New Roman', serif" font-size="60" fill="currentColor" text-anchor="middle">ΔW</text>
-                        <!-- Right line -->
-                        <line x1="270" y1="100" x2="390" y2="100" stroke="currentColor" stroke-width="8"/>
-                        <!-- Right arrow head -->
-                        <polygon points="325,80 375,100 325,120" fill="currentColor"/>
+                <a href="#" class="flex items-center gap-3">
+                    <svg class="h-8 w-auto text-blue-500" viewBox="0 0 400 200" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="10" y1="100" x2="130" y2="100" stroke="currentColor" stroke-width="12" />
+                        <polygon points="65,75 125,100 65,125" fill="currentColor" />
+                        <circle cx="200" cy="100" r="70" stroke="currentColor" stroke-width="12" fill="none" />
+                        <text x="200" y="118" font-family="'Times New Roman', serif" font-size="60" font-weight="bold"
+                            fill="currentColor" text-anchor="middle">ΔW</text>
+                        <line x1="270" y1="100" x2="390" y2="100" stroke="currentColor" stroke-width="12" />
+                        <polygon points="325,75 385,100 325,125" fill="currentColor" />
                     </svg>
                     <div class="flex flex-col">
-                        <span class="text-2xl font-bold tracking-tight text-white leading-none">DELTA WATT</span>
-                        <span class="text-sm font-semibold tracking-widest text-slate-400 uppercase mt-1">Solutions</span>
+                        <span class="text-xl font-extrabold tracking-tight text-white leading-none">DELTA WATT
+                            SOLUTIONS</span>
+                        <span class="text-[10px] font-semibold tracking-widest text-slate-400 uppercase mt-1">Utility
+                            Tax & Tariff Audits</span>
                     </div>
                 </a>
 
-                <!-- Desktop Nav & CTA -->
                 <nav class="hidden md:flex items-center gap-8">
-                    <a href="#model" class="text-sm font-medium text-slate-200 hover:text-white transition">The 50/50 Model</a>
-                    <a href="#qualification" class="text-sm font-medium text-slate-200 hover:text-white transition">Who We Serve</a>
-                    <a href="#process" class="text-sm font-medium text-slate-200 hover:text-white transition">How It Works</a>
-                    <a href="#audit" class="bg-sky-400 hover:bg-sky-500 text-slate-950 font-semibold text-sm px-5 py-2.5 rounded-lg shadow-lg shadow-sky-400/20 transition">
-                        Apply for Energy Assessment
+                    <a href="#calculator"
+                        class="text-sm font-medium text-slate-300 hover:text-white transition">Estimate Refund</a>
+                    <a href="#process" class="text-sm font-medium text-slate-300 hover:text-white transition">Audit
+                        Process</a>
+                    <a href="#statute" class="text-sm font-medium text-slate-300 hover:text-white transition">PA Tax
+                        Code</a>
+                    <a href="#audit"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition shadow-lg shadow-blue-500/20">
+                        Request Bill Audit
                     </a>
                 </nav>
             </div>
@@ -70,108 +78,187 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-28 pb-16 md:pt-32 md:pb-24 bg-slate-950 text-slate-100 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle,_rgba(56,189,248,0.08)_1px,transparent_1px)] [background-size:18px_18px]"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="w-full text-center pb-12 lg:pb-16">
-                <div class="flex flex-col items-center justify-center gap-6 mx-auto w-full max-w-7xl px-4 sm:px-6 xl:px-0">
-                    <p class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-none">
-                        <span class="text-5xl sm:text-6xl md:text-7xl">Delta Watt Solutions</span>
-                    </p>
-                    <svg class="w-full max-w-[620px] h-28 text-sky-400" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="10" y1="100" x2="130" y2="100" stroke="currentColor" stroke-width="10"/>
-                        <polygon points="90,82 130,100 90,118" fill="currentColor"/>
-                        <circle cx="200" cy="100" r="76" stroke="currentColor" stroke-width="10" fill="none"/>
-                        <text x="200" y="115" font-family="'Times New Roman', serif" font-size="64" fill="currentColor" text-anchor="middle">ΔW</text>
-                        <line x1="270" y1="100" x2="390" y2="100" stroke="currentColor" stroke-width="10"/>
-                        <polygon points="330,82 370,100 330,118" fill="currentColor"/>
-                    </svg>
-                </div>
-            </div>
+    <section class="pt-32 pb-20 bg-slate-950 text-slate-200 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
+
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700 text-slate-200 text-xs font-semibold uppercase tracking-wider">
-                        <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                        Performance-Based Energy Reduction
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/50 border border-blue-800/50 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        PA Tax Code Section 72 P.S. § 7204(11) Compliance
                     </div>
-                    
+
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                        We cut your plant's utility costs with smarter energy solutions. <span class="text-sky-400">Zero upfront risk.</span>
+                        Recover Overpaid PA Sales Tax on Plant Utility Bills.
                     </h1>
-                    
-                    <p class="text-lg sm:text-xl text-slate-200 max-w-2xl font-normal leading-relaxed">
-                        For manufacturing facilities spending <strong class="text-white font-semibold">$8,000+ per month</strong> on power and gas. We identify, fund, and engineer energy reductions—taking payment only from the money we save you.
+
+                    <p class="text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
+                        Under PA REV-1220, electricity and natural gas used directly in manufacturing are <strong>100%
+                            exempt from the 6% state sales tax</strong>. Delta Watt Solutions performs technical load
+                        allocation studies, files for 36 months of retroactive cash refunds, and lowers monthly
+                        bills—strictly on contingency.
                     </p>
 
-                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#audit" class="bg-sky-400 hover:bg-sky-500 text-slate-950 text-base font-bold px-8 py-4 rounded-xl shadow-xl shadow-sky-400/20 transition text-center">
-                            Apply for Energy Assessment
-                        </a>
-                        <a href="#model" class="border border-slate-700 hover:border-slate-500 text-slate-200 text-base font-semibold px-6 py-4 rounded-xl transition text-center">
-                            See the 50/50 Model
-                        </a>
+                    <!-- Trust Signals Bar -->
+                    <div class="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-300">
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Technical Load Studies</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>PA Dept. of Revenue Filings</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Zero In-House Labor Required</span>
+                        </div>
                     </div>
 
                     <!-- Micro-proof stats -->
-                    <div class="pt-8 border-t border-slate-800 grid grid-cols-3 gap-4 text-center lg:text-left">
+                    <div class="pt-6 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-white">$0</div>
-                            <div class="text-xs text-slate-300 font-medium">Out-of-Pocket Expense</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white font-['JetBrains_Mono']">6% Tax
+                            </div>
+                            <div class="text-xs text-slate-400 font-medium mt-1">Exemption Rate</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-white">50 / 50</div>
-                            <div class="text-xs text-slate-300 font-medium">Shared Savings Ratio</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white font-['JetBrains_Mono']">36 Mos.
+                            </div>
+                            <div class="text-xs text-slate-400 font-medium mt-1">Retroactive Lookback</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-extrabold text-white">24 Mos.</div>
-                            <div class="text-xs text-slate-300 font-medium">Contingency Term</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-blue-400 font-['JetBrains_Mono']">100%
+                            </div>
+                            <div class="text-xs text-slate-400 font-medium mt-1">Contingency ($0 Risk)</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Form Card -->
+                <!-- Dark Styled Card Form -->
                 <div class="lg:col-span-5" id="audit">
-                    <div class="bg-slate-900/95 border border-slate-800/70 rounded-[1.75rem] p-6 sm:p-8 shadow-2xl shadow-slate-950/30">
-                        <h2 class="text-2xl font-bold text-white mb-2">Apply for Energy Assessment</h2>
-                        <p class="text-sm text-slate-300 mb-6">Complete this short form and we’ll review your facility’s eligibility for a zero-risk energy assessment.</p>
-
-                        <form id="audit-form" class="space-y-4">
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+                        <div class="flex justify-between items-center mb-6 pb-3 border-b border-slate-800">
                             <div>
-                                <label class="block text-xs font-semibold text-slate-200 uppercase mb-1">Company Name</label>
-                                <input name="company" type="text" required placeholder="Precision Manufacturing LLC" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 transition text-sm">
+                                <h2 class="text-lg font-bold text-white tracking-tight">Request Utility Audit</h2>
+                                <p class="text-xs text-slate-400">Step <span id="form-step-num">1</span> of 2: Facility
+                                    Qualification</p>
+                            </div>
+                            <div class="flex gap-1.5">
+                                <span id="step-dot-1" class="w-6 h-1.5 rounded-full bg-blue-500"></span>
+                                <span id="step-dot-2" class="w-6 h-1.5 rounded-full bg-slate-800"></span>
+                            </div>
+                        </div>
+
+                        <form id="audit-form" onsubmit="handleFormSubmit(event)">
+                            <!-- Step 1 Fields -->
+                            <div id="step-1-fields" class="space-y-5">
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-2">Company
+                                        / Plant Name</label>
+                                    <input name="company" id="company" type="text" required
+                                        placeholder="e.g. Apex Precision Machining LLC"
+                                        class="w-full bg-slate-950 border border-slate-700/80 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-2">Facility
+                                        City, PA</label>
+                                    <input name="location" id="location" type="text" required
+                                        placeholder="e.g. York, PA"
+                                        class="w-full bg-slate-950 border border-slate-700/80 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-2">Combined
+                                        Monthly Power & Gas Spend</label>
+                                    <select name="monthlyBill" id="monthlyBill" required
+                                        class="w-full bg-slate-950 border border-slate-700/80 text-white rounded-xl px-4 py-3 pr-10 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition cursor-pointer">
+                                        <option value="" disabled selected class="text-slate-500 bg-slate-900">Select
+                                            approximate spend range</option>
+                                        <option value="$2,000 - $8,000 / mo" class="bg-slate-900 text-white py-2">$2,000
+                                            - $8,000 / mo</option>
+                                        <option value="$8,000 - $15,000 / mo" class="bg-slate-900 text-white py-2">
+                                            $8,000 - $15,000 / mo</option>
+                                        <option value="$15,000 - $35,000 / mo" class="bg-slate-900 text-white py-2">
+                                            $15,000 - $35,000 / mo</option>
+                                        <option value="$35,000 - $75,000 / mo" class="bg-slate-900 text-white py-2">
+                                            $35,000 - $75,000 / mo</option>
+                                        <option value="$75,000+ / mo" class="bg-slate-900 text-white py-2">$75,000+ / mo
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <button type="button" onclick="goToStep2()"
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 rounded-xl transition mt-2 text-center text-sm shadow-lg shadow-blue-600/20">
+                                    Next: Contact Details &rarr;
+                                </button>
                             </div>
 
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-200 uppercase mb-1">Average Monthly Utility Spend</label>
-                                <select name="monthlyBill" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-sky-400 transition text-sm">
-                                    <option value="" disabled selected>Select monthly spend</option>
-                                    <option value="$8,000 - $15,000 / mo">$8,000 - $15,000 / mo</option>
-                                    <option value="$15,000 - $30,000 / mo">$15,000 - $30,000 / mo</option>
-                                    <option value="$30,000 - $50,000 / mo">$30,000 - $50,000 / mo</option>
-                                    <option value="$50,000+ / mo">$50,000+ / mo</option>
-                                </select>
+                            <!-- Step 2 Fields -->
+                            <div id="step-2-fields" class="space-y-5 hidden">
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-2">Work
+                                        Email (CFO / Plant Manager)</label>
+                                    <input name="email" id="email" type="email" required placeholder="name@company.com"
+                                        class="w-full bg-slate-950 border border-slate-700/80 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block text-[11px] font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone
+                                        Number</label>
+                                    <input name="phone" id="phone" type="tel" required placeholder="(717) 000-0000"
+                                        class="w-full bg-slate-950 border border-slate-700/80 text-white placeholder-slate-500 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition">
+                                </div>
+
+                                <div class="pt-2 flex gap-3">
+                                    <button type="button" onclick="goToStep1()"
+                                        class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium py-3.5 px-4 rounded-xl text-xs transition">
+                                        &larr; Back
+                                    </button>
+                                    <button type="submit"
+                                        class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 rounded-xl transition text-center text-sm shadow-lg shadow-blue-600/20">
+                                        Submit for Free Review
+                                    </button>
+                                </div>
                             </div>
 
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-200 uppercase mb-1">Work Email</label>
-                                <input name="email" type="email" required placeholder="plantmanager@company.com" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 transition text-sm">
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-200 uppercase mb-1">Phone Number</label>
-                                <input name="phone" type="tel" required placeholder="(555) 000-0000" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-sky-400 transition text-sm">
-                            </div>
-
-                            <!-- Hidden field mapping to data.source in Google Apps Script -->
-                            <input type="hidden" name="source" value="Website Main Audit Form">
-
-                            <button type="submit" class="w-full bg-sky-400 hover:bg-sky-500 text-slate-950 font-bold py-4 rounded-2xl shadow-lg shadow-sky-400/20 transition text-sm">
-                                Submit Energy Assessment Request
-                            </button>
-                            <p class="text-xs text-center text-slate-400 mt-2">By submitting, you agree to let Delta Watt Solutions review your request and follow up within 24 hours.</p>
+                            <p class="text-[11px] text-center text-slate-400 mt-4 leading-relaxed">
+                                Delta Watt Solutions maintains strict confidentiality. Zero upfront fees.
+                            </p>
                         </form>
+
+                        <div id="form-success" class="hidden text-center py-8 space-y-3">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-900/40 border border-blue-500/50 text-blue-400 flex items-center justify-center mx-auto">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Review Request Submitted</h3>
+                            <p class="text-xs text-slate-300 max-w-xs mx-auto">The Delta Watt Solutions team will
+                                analyze your facility details and reach out within 1 business day.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -179,164 +266,301 @@
         </div>
     </section>
 
-    <!-- Contingency Model Breakdown -->
-    <section id="model" class="py-20 bg-slate-950 text-slate-100">
+    <!-- Interactive Refund Estimator Calculator Section -->
+    <section id="calculator" class="py-20 bg-slate-900/50 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Interactive Tax Refund Estimator</h2>
+                <p class="text-slate-400 text-sm mt-3">Adjust your facility's monthly utility spend and estimated
+                    manufacturing load allocation. Under PA law, meters must meet or exceed 50% direct process usage to
+                    qualify for exemption.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-10 shadow-xl">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+
+                    <!-- Controls -->
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Monthly
+                                    Utility Spend</label>
+                                <span id="spend-val"
+                                    class="font-['JetBrains_Mono'] font-bold text-blue-400 text-base">$25,000 /
+                                    mo</span>
+                            </div>
+                            <input type="range" id="spend-range" min="2000" max="100000" step="1000" value="25000"
+                                oninput="updateCalculator()"
+                                class="w-full accent-blue-500 bg-slate-950 h-2 rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                                <span>$2,000</span>
+                                <span>$100,000+</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label
+                                    class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Manufacturing
+                                    / Direct Process %</label>
+                                <span id="pct-val"
+                                    class="font-['JetBrains_Mono'] font-bold text-blue-400 text-base">75%</span>
+                            </div>
+                            <input type="range" id="pct-range" min="10" max="95" step="5" value="75"
+                                oninput="updateCalculator()"
+                                class="w-full accent-blue-500 bg-slate-950 h-2 rounded-lg cursor-pointer">
+                            <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                                <span>10% (Non-Qualifying)</span>
+                                <span>95% (Heavy Mfg)</span>
+                            </div>
+                        </div>
+
+                        <div id="calculator-note"
+                            class="bg-slate-950/80 border border-slate-800 p-4 rounded-xl text-xs text-slate-400 leading-relaxed transition-all duration-200">
+                            <strong>PA Predominant Use Rule:</strong> Meters with 50%+ manufacturing usage qualify for
+                            proportional exemption on monthly bills.
+                        </div>
+                    </div>
+
+                    <!-- Output Box -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 text-center space-y-6">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Estimated
+                                36-Month Cash Refund</span>
+                            <div id="retro-refund"
+                                class="text-4xl font-extrabold text-blue-400 font-['JetBrains_Mono'] mt-1">$40,500</div>
+                            <span id="retro-subtext" class="text-[10px] text-slate-500">Retroactive check from PA Dept.
+                                of Revenue</span>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-800">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Estimated Annual
+                                Ongoing Savings</span>
+                            <div id="annual-savings" class="text-2xl font-bold text-white font-['JetBrains_Mono'] mt-1">
+                                $13,500 / yr</div>
+                            <span id="annual-subtext" class="text-[10px] text-slate-500">Removed from future monthly
+                                utility bills</span>
+                        </div>
+
+                        <a href="#audit"
+                            class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition text-xs shadow-lg shadow-blue-600/20">
+                            Claim Your Refund Review
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Audit Process Timeline Section -->
+    <section id="process" class="py-20 bg-slate-950 border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">The 50/50 Shared Savings Model</p>
-                    <p class="mt-6 text-lg text-slate-200 max-w-2xl mx-auto">If we don't reduce your utility bills, you owe us nothing. Our incentives are aligned 100% with your operational savings.</p>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight">Our 4-Step Audit Process</h2>
+                <p class="text-slate-400 text-sm mt-3">Delta Watt Solutions handles 100% of the engineering
+                    calculations, documentation, and state filing. Zero disruption to plant operations.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Step 1 -->
-                <div class="p-8 bg-slate-900 rounded-2xl border border-white/10">
-                    <div class="w-12 h-12 bg-sky-400 text-slate-950 rounded-xl flex items-center justify-center font-bold text-xl mb-6">1</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Zero Capital Outlay</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        We assess your utility bills and daily operations, identify cost reduction opportunities, and make recommendations for operational and technical adjustments.
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-400 font-['JetBrains_Mono'] font-bold text-sm flex items-center justify-center mb-4">
+                        01</div>
+                    <h3 class="text-base font-bold text-white mb-2">Utility Bill Analysis</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">We review 12 to 36 months of electric and natural
+                        gas billing statements to identify sales tax charges and rate class discrepancies.</p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-400 font-['JetBrains_Mono'] font-bold text-sm flex items-center justify-center mb-4">
+                        02</div>
+                    <h3 class="text-base font-bold text-white mb-2">Engineering Load Study</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Our engineers calculate exact kilowatt-hour and
+                        therm consumption for all direct manufacturing equipment vs. non-exempt plant HVAC and lighting.
                     </p>
                 </div>
 
-                <!-- Step 2 -->
-                <div class="p-8 bg-slate-900/95 rounded-3xl border border-slate-700/70 relative">
-                    <div class="w-12 h-12 bg-sky-400 text-slate-950 rounded-xl flex items-center justify-center font-bold text-xl mb-6">2</div>
-                    <h3 class="text-xl font-bold text-white mb-3">50/50 Split for 24 Months</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Once optimizations are live, we simply split the verified cost reductions 50/50 with you every month for the first two years.
-                    </p>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-400 font-['JetBrains_Mono'] font-bold text-sm flex items-center justify-center mb-4">
+                        03</div>
+                    <h3 class="text-base font-bold text-white mb-2">State Exemption Filing</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">We submit formal REV-1220 exemption certificates
+                        to utilities and prepare technical documentation for the PA Department of Revenue.</p>
                 </div>
 
-                <!-- Step 3 -->
-                <div class="p-8 bg-slate-900 rounded-2xl border border-white/10">
-                    <div class="w-12 h-12 bg-sky-400 text-slate-950 rounded-xl flex items-center justify-center font-bold text-xl mb-6">3</div>
-                    <h3 class="text-xl font-bold text-white mb-3">100% Savings Are Yours</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        After month 24, our agreement ends. Your facility retains 100% of the ongoing monthly energy savings for the lifetime of the plant.
-                    </p>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 relative">
+                    <div
+                        class="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-400 font-['JetBrains_Mono'] font-bold text-sm flex items-center justify-center mb-4">
+                        04</div>
+                    <h3 class="text-base font-bold text-white mb-2">Refund Check Delivery</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">The state issues your retroactive cash refund
+                        check, and future utility bills are permanently adjusted to reflect exempt status.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Qualification / Target Market -->
-    <section id="qualification" class="py-20 bg-slate-950 text-slate-100">
+    <!-- PA Tax Statute Compliance Section -->
+    <section id="statute" class="py-20 bg-slate-900/40 border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6 space-y-6">
-                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Built Specifically for Small-to-Medium Manufacturing Facilities</h3>
-                    <p class="text-slate-200 leading-relaxed">
-                        Generic energy consultants charge massive retainers. We specifically partner with industrial plants where quick, technical operational adjustments generate high-impact financial return.
+                <div class="lg:col-span-6 space-y-5">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/50 border border-blue-800/50 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+                        Pennsylvania Tax Law Specifics
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-white tracking-tight">Understanding PA 72 P.S. § 7204(11)
+                    </h2>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Pennsylvania law grants manufacturers a direct sales tax exemption on energy consumed during
+                        production processes. However, utility providers default to charging 6% state tax unless a
+                        certified predominant use study is filed.
                     </p>
-                    
-                    <ul class="space-y-4 pt-2">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-white shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-slate-200"><strong class="text-white">Minimum Utility Bill:</strong> $8,000/month or higher in combined power and natural gas.</span>
+                    <ul class="space-y-3 text-xs text-slate-300">
+                        <li class="flex items-start gap-2.5">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span><strong>3-Year Statutory Limit:</strong> PA statute allows recovery of overpaid taxes
+                                up to 36 months retroactive from filing date.</span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-white shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-slate-200"><strong class="text-white">Facility Types:</strong> Plastics, Machining, Food Processing, Chemicals, Fabrication, Packaging, & Assembly.</span>
+                        <li class="flex items-start gap-2.5">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span><strong>Predominant Use Standard:</strong> If exempt manufacturing load exceeds 50% on
+                                a meter, full exemption status applies with precise allocation.</span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-6 h-6 text-white shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span class="text-slate-200"><strong class="text-white">Decision Makers:</strong> Plant Managers, CFOs, & Owners seeking margin expansion without capital expenditure.</span>
+                        <li class="flex items-start gap-2.5">
+                            <svg class="w-4 h-4 text-blue-400 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span><strong>Turnkey Audit Defense:</strong> Delta Watt Solutions defends all calculations
+                                if audited by the Department of Revenue.</span>
                         </li>
                     </ul>
                 </div>
 
-                <div class="lg:col-span-6 bg-slate-900/95 border border-slate-700/70 rounded-3xl p-8">
-                    <h4 class="text-xl font-bold text-white mb-4">Where We Find Your Savings</h4>
-                    <div class="grid sm:grid-cols-2 gap-4">
-                        <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10">
-                            <div class="font-bold text-white mb-1">Utility Rate Classification</div>
-                            <div class="text-xs text-slate-300">Implementing the most cost-effective utility rate structure.</div>
-                        </div>
-                        <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10">
-                            <div class="font-bold text-white mb-1">Peak Demand Management</div>
-                            <div class="text-xs text-slate-300">Shifting load cycles to eliminate costly peak demand penalties.</div>
-                        </div>
-                        <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10">
-                            <div class="font-bold text-white mb-1">Power Factor Correction</div>
-                            <div class="text-xs text-slate-300">Providing solutions for reactive power penalties.</div>
-                        </div>
-                        <div class="p-4 bg-slate-900/80 rounded-xl border border-white/10">
-                            <div class="font-bold text-white mb-1">Tax Penalty Reduction</div>
-                            <div class="text-xs text-slate-300">Reducing tax penalties through strategic energy management and studies.</div>
-                        </div>
+                <div
+                    class="lg:col-span-6 bg-slate-950 border border-slate-800 rounded-2xl p-6 font-['JetBrains_Mono'] text-xs text-slate-300 space-y-4">
+                    <div class="flex justify-between border-b border-slate-800 pb-2 text-slate-400">
+                        <span>PA REV-1220 Compliance Code</span>
+                        <span>Status: Active Exemption</span>
+                    </div>
+                    <p class="text-blue-300">// Sample Monthly Calculation</p>
+                    <div class="space-y-1.5 leading-loose">
+                        <div class="flex justify-between"><span>Monthly Electric Bill:</span> <span
+                                class="text-white">$30,000.00</span></div>
+                        <div class="flex justify-between"><span>PA Sales Tax Charged (6%):</span> <span
+                                class="text-red-400">$1,800.00</span></div>
+                        <div class="flex justify-between"><span>Verified Mfg Load (80%):</span> <span
+                                class="text-emerald-400">EXEMPT</span></div>
+                        <div class="flex justify-between font-bold text-white border-t border-slate-800 pt-2">
+                            <span>Monthly Overpayment:</span> <span class="text-blue-400">$1,440.00 / mo</span></div>
+                        <div class="flex justify-between font-bold text-white"><span>36-Month Retro Refund:</span> <span
+                                class="text-blue-400">$51,840.00</span></div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ready to Begin -->
-    <section class="py-20 bg-slate-950">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-slate-900/95 border border-white/10 rounded-3xl p-8 sm:p-12 shadow-xl shadow-slate-950/25 text-center">
-                <h2 class="text-3xl font-extrabold text-white mb-3">Ready to begin?</h2>
-                <p class="text-slate-300 mb-6">The assessment request form is now at the top of the page. Submit your details and we will follow up with next steps for your facility.</p>
-                <a href="#audit" class="inline-flex items-center justify-center rounded-2xl bg-sky-400 hover:bg-sky-500 px-8 py-4 text-base font-bold text-slate-950 shadow-lg shadow-sky-400/20 transition">
-                    Apply for Energy Assessment
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-white/10 text-slate-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-3">
-                <div class="bg-white p-1 rounded-md flex items-center justify-center">
-                    <svg class="h-6 w-auto text-black" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="10" y1="100" x2="130" y2="100" stroke="currentColor" stroke-width="6"/>
-                        <polygon points="65,80 115,100 65,120" fill="currentColor"/>
-                        <circle cx="200" cy="100" r="75" stroke="currentColor" stroke-width="6" fill="none"/>
-                        <text x="200" y="115" font-family="'Times New Roman', serif" font-size="52" fill="currentColor" text-anchor="middle">ΔW</text>
-                        <line x1="270" y1="100" x2="390" y2="100" stroke="currentColor" stroke-width="6"/>
-                        <polygon points="325,80 375,100 325,120" fill="currentColor"/>
-                    </svg>
-                </div>
-                <span class="text-lg font-bold text-white tracking-wider">DELTA WATT SOLUTIONS</span>
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800/80">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+            <div class="flex flex-col">
+                <span class="font-bold text-slate-300 tracking-wider uppercase">Delta Watt Solutions</span>
+                <span class="text-slate-400 mt-0.5">Pennsylvania Utility Tax & Tariff Audit Specialists</span>
             </div>
-            <p class="text-xs">© 2026 Delta Watt Solutions. All rights reserved. Industrial Performance Energy Optimization.</p>
+            <p>© 2026 Delta Watt Solutions. All Rights Reserved. Not affiliated with state government agencies.</p>
         </div>
     </footer>
 
-    <!-- Form Handler Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbyVcqn2jgU6TGm2b6fxfXWLKKmDyOrZgiATkOml7HbHGQfvNH209K4TofYaHgGQoGc/exec';
+        // Form Navigation
+        function goToStep2() {
+            const company = document.getElementById('company').value;
+            const location = document.getElementById('location').value;
+            const monthlyBill = document.getElementById('monthlyBill').value;
 
-            const submitToGoogle = (formElement, event) => {
-                event.preventDefault();
-                const submitBtn = formElement.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerText;
-                
-                submitBtn.disabled = true;
-                submitBtn.innerText = 'Submitting...';
-
-                const formData = new FormData(formElement);
-
-                fetch(scriptURL, { method: 'POST', body: formData })
-                    .then(response => {
-                        alert('Assessment request received. A Delta Watt energy specialist will contact you within 24 hours.');
-                        formElement.reset();
-                    })
-                    .catch(error => {
-                        alert('Submission error. Please try again or email us directly.');
-                        console.error('Error!', error.message);
-                    })
-                    .finally(() => {
-                        submitBtn.disabled = false;
-                        submitBtn.innerText = originalText;
-                    });
-            };
-
-            const auditForm = document.getElementById('audit-form');
-            if (auditForm) {
-                auditForm.addEventListener('submit', (e) => submitToGoogle(auditForm, e));
+            if (!company || !location || !monthlyBill) {
+                alert('Please fill in your company details to proceed.');
+                return;
             }
-        });
+
+            document.getElementById('step-1-fields').classList.add('hidden');
+            document.getElementById('step-2-fields').classList.remove('hidden');
+            document.getElementById('form-step-num').textContent = '2';
+            document.getElementById('step-dot-1').className = 'w-6 h-1.5 rounded-full bg-slate-800';
+            document.getElementById('step-dot-2').className = 'w-6 h-1.5 rounded-full bg-blue-500';
+        }
+
+        function goToStep1() {
+            document.getElementById('step-2-fields').classList.add('hidden');
+            document.getElementById('step-1-fields').classList.remove('hidden');
+            document.getElementById('form-step-num').textContent = '1';
+            document.getElementById('step-dot-1').className = 'w-6 h-1.5 rounded-full bg-blue-500';
+            document.getElementById('step-dot-2').className = 'w-6 h-1.5 rounded-full bg-slate-800';
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('audit-form').classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        }
+
+        // Interactive Estimator Math
+        function updateCalculator() {
+            const spend = parseFloat(document.getElementById('spend-range').value);
+            const pctRaw = parseFloat(document.getElementById('pct-range').value);
+            const pct = pctRaw / 100;
+
+            document.getElementById('spend-val').textContent = '$' + spend.toLocaleString() + ' / mo';
+            document.getElementById('pct-val').textContent = pctRaw + '%';
+
+            const retroRefundEl = document.getElementById('retro-refund');
+            const annualSavingsEl = document.getElementById('annual-savings');
+            const noteEl = document.getElementById('calculator-note');
+
+            // PA Rule: Below 50% predominant use threshold yields $0 utility exemption
+            if (pctRaw < 50) {
+                retroRefundEl.textContent = '$0';
+                retroRefundEl.className = 'text-4xl font-extrabold text-slate-500 font-[\'JetBrains_Mono\'] mt-1';
+
+                annualSavingsEl.textContent = '$0 / yr';
+                annualSavingsEl.className = 'text-2xl font-bold text-slate-500 font-[\'JetBrains_Mono\'] mt-1';
+
+                noteEl.innerHTML = '<strong class="text-amber-400">Below Exemption Threshold:</strong> PA law requires a meter to have 50%+ direct manufacturing use to qualify for sales tax exemption. Usage under 50% results in $0 exemption.';
+                noteEl.className = 'bg-amber-950/30 border border-amber-800/60 p-4 rounded-xl text-xs text-amber-200/90 leading-relaxed transition-all duration-200';
+            } else {
+                // 6% PA Tax * Manufacturing Percentage
+                const monthlyTaxOverpayment = spend * 0.06 * pct;
+                const annualSavings = monthlyTaxOverpayment * 12;
+                const retroRefund = monthlyTaxOverpayment * 36;
+
+                retroRefundEl.textContent = '$' + Math.round(retroRefund).toLocaleString();
+                retroRefundEl.className = 'text-4xl font-extrabold text-blue-400 font-[\'JetBrains_Mono\'] mt-1';
+
+                annualSavingsEl.textContent = '$' + Math.round(annualSavings).toLocaleString() + ' / yr';
+                annualSavingsEl.className = 'text-2xl font-bold text-white font-[\'JetBrains_Mono\'] mt-1';
+
+                noteEl.innerHTML = '<strong>PA Predominant Use Rule:</strong> Meters with 50%+ manufacturing usage qualify for proportional exemption on monthly bills.';
+                noteEl.className = 'bg-slate-950/80 border border-slate-800 p-4 rounded-xl text-xs text-slate-400 leading-relaxed transition-all duration-200';
+            }
+        }
     </script>
 </body>
+
 </html>
